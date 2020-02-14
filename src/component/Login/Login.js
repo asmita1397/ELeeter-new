@@ -6,6 +6,8 @@ import { MDBBtn } from "mdbreact";
 import '../Login/Login.css'
 import SimpleNavBar from '../Navbar/SimpleNavBar';
 import data from '../data.json'
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 
@@ -22,9 +24,22 @@ export class Login extends Component {
     }
 
 
+    notifySuccess = () => {
+        toast.success("Logging In", {
+          position: toast.POSITION.TOP_CENTER
+        }, {containerId: 'B'});
+      };
+    
+      notifyFailure = () => {
+        toast.error("Invalid Username and/or password", {
+          position: toast.POSITION.TOP_CENTER
+        });
+      };
+    
 
 
     homepage = (event) => {
+
         event.preventDefault();
 
         console.log(this.state.json);
@@ -40,14 +55,20 @@ export class Login extends Component {
                 console.log("data========", this.state)
                // this.props.clicked(this.state)
                localStorage.setItem('email',this.state.json.users[index].name)
-                this.props.history.push('/cards')
+
+               this.notifySuccess();
+
+               setTimeout(() => {
+                this.props.history.push('/cards');
+            }, 1000)
+
                 break;
                 }
             
 
         }
         if(bol==false){
-        alert("invalid cridentials");
+       this.notifyFailure();
         }
       
     }
@@ -55,11 +76,14 @@ export class Login extends Component {
     render() {
         return (
             <div>
+                <ToastContainer
+          autoClose={1000}
+          pauseOnHover={false}
+          pauseOnFocusLoss={false}
+          hideProgressBar={true}
+        />
+        <ToastContainer autoClose={500} enableMultiContainer containerId={'B'} position={toast.POSITION.TOP_CENTER}/>
                 <SimpleNavBar/>
-               { localStorage.clear()/* ,
-    window.history.pushState(null, null, window.location.href),
-    window.onpopstate = function () {
-        window.history.go(1)} */}
                 <div  className="Logincenter">
                     <div className="container-fluid mt-5">
                         <div className="row">

@@ -404,7 +404,7 @@ export class MailComponent extends Component {
 
             console.log("header info --", headers)
             Axios.post(
-                'http://localhost:8081/send-email2', data,
+                'http://10.10.12.185:8081/send-email2', data,
 
                 { headers: headers }
             )
@@ -601,17 +601,17 @@ export class MailComponent extends Component {
                                                 class="input" style={{ height: 100 }}
                                                 value={this.state.content}
                                                 rows="5" onChange={(event) => {
-                                                    if (this.state.checkMail) {
+                                                   /*  if (this.state.checkMail) {
                                                         this.setState({
                                                             content: "HR Default content"
                                                         });
-                                                    } else {
+                                                    } else { */
                                                         this.setState({
                                                             content: event.target.value
                                                         });
                                                     } /* this.hideContent() */
                                                 }
-                                                }
+                                               // }
 
                                             />
                                             {this.state.showContent ? <div id="errordiv" style={{ marginTop: '-5px', paddingLeft: '0px' }} className="container-fluid">Please fill out Content field * </div> : null}

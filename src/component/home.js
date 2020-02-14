@@ -176,6 +176,7 @@ import { Thumbnail } from 'react-bootstrap';
               <div class="nav-link new-link">
               <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img src="http://kartavyasadhana.in/assets/images/user.png" class="rounded-circle z-depth-0" alt="avatar image" />
+<small>{localStorage.getItem("email").substring(0, localStorage.getItem("email").lastIndexOf("@")).toUpperCase()}</small>
                   </a>
                   <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-5">
                   {/*   <a class="dropdown-item waves-effect waves-light" href="#">Profile-Settings</a> */}
