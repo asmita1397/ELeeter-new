@@ -1,0 +1,47 @@
+
+{
+    "users": [
+     
+       {
+        "name":"muhibprime@gmail.com",
+         "password":"123"
+       },
+       {
+        "name":"muhib.k@testyantra.com",
+        "password":"123"
+       },
+       {
+          "name":"vikas.k@testyantra.com",
+          "password":"vikas@123"
+       },
+       {
+          "name":"hr@testyantra.com",
+          "password":"hr@123"
+       },
+       {
+          "name":"hr_ambika@testyantra.com",
+          "password":"ambika@123"
+       },
+       {
+          "name":"hr_shwetha@testyantra.com",
+          "password":"shwetha@123"
+       },
+       {
+         "name":"vidyasr262@gmail.com",
+         "password":"123"
+      },
+      {
+         "name":"abc@gmail.com",
+         "password":"123"
+      },
+      {
+         "name":"asmitashenvi97@gmail.com",
+         "password":"123"
+      },
+      {
+         "name":"sonu9871aug@gmail.com",
+         "password":"123"
+      }
+
+    ]
+ }
